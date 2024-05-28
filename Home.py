@@ -10,9 +10,9 @@ with col1:
 
 with col2:
     st.title("Ardit Sulce")
-    content = """ 
-    Hey there! I am Ardit. gjgvjvhvhvjh. hjvhvhjvhvhjvjhh
-    bhjbvhjbhbhkbkj.kbukbjkbjbjk.kbjbjbjkbj"""
+    content = """
+    Hey there! I am Ardit. 
+    """
     st.info(content)
 
 content2 = """
@@ -26,6 +26,7 @@ content_csv = pandas.read_csv("data.csv", sep=";" )
 
 with col3:
     for index, row in content_csv[:10].iterrows():
+
         st.header(row["title"])
         st.write(row["description"])
         st.image("images/" + row["image"])

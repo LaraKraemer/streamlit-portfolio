@@ -1,6 +1,7 @@
+"""This module downloads streamlit library"""
 import streamlit as st
 import pandas
-from send_email import send_email
+from src.send_email import send_email
 
 df = pandas.read_csv("topics.csv")
 
@@ -23,4 +24,3 @@ From: {user_email}
     if button:
         send_email(message)
         st.info("Your email was sent successfully")
-
